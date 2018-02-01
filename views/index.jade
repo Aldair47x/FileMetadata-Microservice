@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  h1.text-description-tittle1 API Basejump: File Metadata Microservice
+  p
+    span(class="text-description-tittle") Made by aldair47x ~ 
+    span(class="text-yellow") Col
+    span(class="text-blue") om
+    span(class="text-red") bia
+
+  h1.text-description-tittle1 User stories:
+  div.container-fluid
+    div.row
+      div.col-sm-6
+        p(class="text-description-tittle2")
+          span(class="text-red1") 1)
+          span Can submit a FormData object that includes a file upload.
+          br
+          span(class="text-red1") 2)
+          span  When I submit something, I will receive the file size in bytes within the JSON response.
+  br
+  h1.text-description-tittle1 Select a file:
+  div.container-fluid
+    div.row
+      div.col-sm-6
+        form(action="/upload", method="post", enctype="multipart/form-data")
+          label(for="file")
+          input(class="btn btn-info btn-md", type="file", id="file", name="file")
+          br
+          br
+          input(class="btn btn-md", type="submit")
+
+       
